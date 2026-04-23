@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lise Oliveira · Ateliê de Papelaria Personalizada</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Cursor personalizado -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursorFollower"></div>
+
+<!-- WhatsApp flutuante -->
+<a href="https://wa.me/5551999999999?text=Olá! Vi o site e gostaria de um orçamento 💕"
+   class="whatsapp-float" target="_blank" title="Fale pelo WhatsApp">💬</a>
+
+<!-- Modal de produto -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<!-- Toast de confirmação -->
+<div class="toast" id="toast">
+  <strong>Mensagem enviada! 💕</strong>
+  Entraremos em contato em breve.
+</div>
+
+<!-- ===================== NAV ===================== -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">Lise <span>Oliveira</span></a>
+  <ul class="nav-links">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#produtos">Produtos</a></li>
+    <li><a href="#processo">Como Funciona</a></li>
+    <li><a href="#depoimentos">Depoimentos</a></li>
+    <li><a href="#contato" class="nav-cta">Orçamento</a></li>
+  </ul>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section id="hero">
+  <div class="hero-left">
+    <p class="hero-tag">Papelaria Personalizada · Viamão – RS</p>
+    <h1 class="hero-h1">
+      Arte em cada<br>
+      <em>detalhe seu.</em>
+    </h1>
+    <p class="hero-sub">
+      Criações exclusivas que transformam momentos em memórias.
+      Cada peça pensada com carinho para contar a sua história.
+    </p>
+    <div class="hero-btns">
+      <a href="#produtos" class="btn-primary">Ver Coleção</a>
+      <a href="#contato" class="btn-outline">Pedir Orçamento</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-deco-circle"></div>
+    <div class="hero-deco-circle"></div>
+    <div class="float-scissors">✂️</div>
+    <div class="hero-img-wrap">
+      <svg class="hero-mockup" viewBox="0 0 280 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="20" y="20" width="240" height="300" rx="4" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+        <rect x="40" y="50" width="200" height="120" rx="2" fill="rgba(255,255,255,0.1)"/>
+        <text x="140" y="122" text-anchor="middle" font-family="serif" font-size="48" fill="rgba(255,255,255,0.4)">✂️</text>
+        <rect x="60" y="190" width="160" height="12" rx="2" fill="rgba(255,255,255,0.2)"/>
+        <rect x="80" y="212" width="120" height="8" rx="2" fill="rgba(255,255,255,0.12)"/>
+        <rect x="90" y="240" width="100" height="30" rx="2" fill="rgba(107,45,53,0.7)"/>
+        <text x="140" y="260" text-anchor="middle" font-family="sans-serif" font-size="11" fill="rgba(255,255,255,0.8)">Ver Produto</text>
+        <circle cx="60" cy="310" r="8" fill="rgba(255,255,255,0.15)"/>
+        <circle cx="140" cy="310" r="8" fill="rgba(255,255,255,0.5)"/>
+        <circle cx="220" cy="310" r="8" fill="rgba(255,255,255,0.15)"/>
+      </svg>
+    </div>
+    <div class="hero-badge">
+      Feito com<br>
+      <em>amor e dedicação</em><br>
+      pra você ✨
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SOBRE ===================== -->
+<section id="sobre">
+  <div class="sobre-left reveal">
+    <p class="section-label">A artesã por trás</p>
+    <h2 class="sobre-h2">Olá, eu sou<br><em>Lise Oliveira</em></h2>
+    <p class="sobre-p">
+      Sou empreendedora e apaixonada por papelaria personalizada. Aqui no ateliê,
+      cada criação nasce da minha vontade de transformar momentos especiais em
+      lembranças únicas e cheias de significado.
+    </p>
+    <p class="sobre-p">
+      De Viamão – RS, entrego afeto em cada dobra, em cada estampa, em cada detalhe
+      que pensamos juntos para você.
+    </p>
+    <div class="sobre-stats">
+      <div>
+        <span class="stat-num">100%</span>
+        <span class="stat-label">Personalizado</span>
+      </div>
+      <div>
+        <span class="stat-num">✨</span>
+        <span class="stat-label">Com Carinho</span>
+      </div>
+      <div>
+        <span class="stat-num">RS</span>
+        <span class="stat-label">Viamão</span>
+      </div>
+    </div>
+  </div>
+  <div class="sobre-right reveal">
+    <div class="sobre-card">
+      <div class="card-icon">🎨</div>
+      <div class="card-title">Design Exclusivo</div>
+      <div class="card-desc">Cada peça é criada do zero para você, sem templates prontos. Seu evento, seu estilo, sua identidade.</div>
+    </div>
+    <div class="sobre-card">
+      <div class="card-icon">💝</div>
+      <div class="card-title">Feito com Amor</div>
+      <div class="card-desc">Cada detalhe recebe atenção e carinho para que o resultado seja exatamente o que você sonhou.</div>
+    </div>
+    <div class="sobre-card">
+      <div class="card-icon">🚀</div>
+      <div class="card-title">Entrega Rápida</div>
+      <div class="card-desc">Prazos respeitados e comunicação constante do início ao fim do processo criativo.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRODUTOS ===================== -->
+<section id="produtos">
+  <div class="produtos-header reveal">
+    <div>
+      <p class="section-label">Criações do ateliê</p>
+      <h2 class="produtos-h2">Nossa <em>coleção</em></h2>
+    </div>
+    <div class="filter-tabs">
+      <button class="filter-tab active" onclick="filterProducts('todos', this)">Todos</button>
+      <button class="filter-tab" onclick="filterProducts('convites', this)">Convites</button>
+      <button class="filter-tab" onclick="filterProducts('datas', this)">Datas</button>
+      <button class="filter-tab" onclick="filterProducts('kits', this)">Kits</button>
+    </div>
+  </div>
+
+  <div class="products-grid" id="products-grid">
+
+    <!-- Convites Personalizados -->
+    <div class="product-card featured reveal" data-cat="convites"
+         onclick="openModal('Convite Premium','A partir de R$ 8,00/un','Convites personalizados com arte exclusiva para o seu evento. Disponível em papel couchê 300g, laminação holográfica ou fosca, e impressão de alta qualidade. Mínimo de 50 unidades.','📨')">
+      <div class="product-img" style="background:linear-gradient(135deg,#C9756A,#6B2D35)">
+        <div class="product-emoji">📨</div>
+        <div class="product-overlay"><span class="overlay-btn">Ver Detalhes</span></div>
+      </div>
+      <div class="product-body">
+        <p class="product-category">Convites</p>
+        <h3 class="product-name">Convites Personalizados</h3>
+        <p class="product-desc">Artes exclusivas para aniversários, casamentos, batizados e muito mais. Papel premium com acabamento impecável.</p>
+        <div class="product-footer">
+          <div class="product-price"><span class="price-from">a partir de</span>R$ 8,00/un</div>
+          <a href="https://wa.me/5551999999999?text=Olá! Quero um orçamento de Convites Personalizados 📨"
+             class="whatsapp-btn" target="_blank" onclick="event.stopPropagation()">💬 Orçar</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Célula de Ano Novo -->
+    <div class="product-card reveal" data-cat="datas"
+         onclick="openModal('Célula de Ano Novo','A partir de R$ 15,00/un','Uma lembrança delicada e significativa para celebrar a chegada do novo ano com fé e esperança. Arte personalizada com versículo e nome.','✨')">
+      <div class="product-img" style="background:linear-gradient(135deg,#C9A96E,#8B6840)">
+        <div class="product-emoji">✨</div>
+        <div class="product-overlay"><span class="overlay-btn">Ver Detalhes</span></div>
+      </div>
+      <div class="product-body">
+        <p class="product-category">Datas Especiais</p>
+        <h3 class="product-name">Célula de Ano Novo</h3>
+        <p class="product-desc">Arte personalizada para celebrar o novo ano com fé e esperança.</p>
+        <div class="product-footer">
+          <div class="product-price"><span class="price-from">a partir de</span>R$ 15,00/un</div>
+          <a href="https://wa.me/5551999999999?text=Olá! Quero um orçamento de Célula de Ano Novo ✨"
+             class="whatsapp-btn" target="_blank" onclick="event.stopPropagation()">💬 Orçar</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lembrança de Natal -->
+    <div class="product-card reveal" data-cat="datas"
+         onclick="openModal('Lembrança de Natal','A partir de R$ 12,00/un','Lembranças natalinas personalizadas com arte exclusiva. Perfeitas para presentear com carinho na época mais especial do ano. Arte com folhagens e mensagem personalizada.','🎄')">
+      <div class="product-img" style="background:linear-gradient(135deg,#2D6A3F,#1A4A2A)">
+        <div class="product-emoji">🎄</div>
+        <div class="product-overlay"><span class="overlay-btn">Ver Detalhes</span></div>
+      </div>
+      <div class="product-body">
+        <p class="product-category">Natal</p>
+        <h3 class="product-name">Lembrança de Natal</h3>
+        <p class="product-desc">Presenteie com arte e carinho nesta época tão especial.</p>
+        <div class="product-footer">
+          <div class="product-price"><span class="price-from">a partir de</span>R$ 12,00/un</div>
+          <a href="https://wa.me/5551999999999?text=Olá! Quero um orçamento de Lembrança de Natal 🎄"
+             class="whatsapp-btn" target="_blank" onclick="event.stopPropagation()">💬 Orçar</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kit Páscoa -->
+    <div class="product-card reveal" data-cat="kits"
+         onclick="openModal('Kit Páscoa Personalizado','A partir de R$ 35,00/kit','Kit completo de Páscoa com embalagem personalizada, tag, cartão e decoração exclusiva. Arte criada especialmente para sua empresa ou família.','🐣')">
+      <div class="product-img" style="background:linear-gradient(135deg,#E8C4B8,#C9756A)">
+        <div class="product-emoji">🐣</div>
+        <div class="product-overlay"><span class="overlay-btn">Ver Detalhes</span></div>
+      </div>
+      <div class="product-body">
+        <p class="product-category">Kits</p>
+        <h3 class="product-name">Kit Páscoa Personalizado</h3>
+        <p class="product-desc">Kit completo com embalagem, tag e cartão. Perfeito para presentear.</p>
+        <div class="product-footer">
+          <div class="product-price"><span class="price-from">a partir de</span>R$ 35,00/kit</div>
+          <a href="https://wa.me/5551999999999?text=Olá! Quero um orçamento de Kit Páscoa 🐣"
+             class="whatsapp-btn" target="_blank" onclick="event.stopPropagation()">💬 Orçar</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Marcador de Bíblia -->
+    <div class="product-card reveal" data-cat="convites"
+         onclick="openModal('Marcador de Bíblia','A partir de R$ 6,00/un','Marcadores de bíblia personalizados com versículos, nomes e arte exclusiva. Material premium com acabamento delicado. Ideais para lembranças religiosas e presentes.','📖')">
+      <div class="product-img" style="background:linear-gradient(135deg,#8B4E6B,#4A2040)">
+        <div class="product-emoji">📖</div>
+        <div class="product-overlay"><span class="overlay-btn">Ver Detalhes</span></div>
+      </div>
+      <div class="product-body">
+        <p class="product-category">Religioso</p>
+        <h3 class="product-name">Marcador de Bíblia</h3>
+        <p class="product-desc">Arte personalizada com versículo e nome para lembranças especiais.</p>
+        <div class="product-footer">
+          <div class="product-price"><span class="price-from">a partir de</span>R$ 6,00/un</div>
+          <a href="https://wa.me/5551999999999?text=Olá! Quero um orçamento de Marcador de Bíblia 📖"
+             class="whatsapp-btn" target="_blank" onclick="event.stopPropagation()">💬 Orçar</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kit Lembrancinha -->
+    <div class="product-card reveal" data-cat="kits"
+         onclick="openModal('Kit Lembrancinha','Sob consulta','Kits de lembrancinhas completamente personalizados para qualquer ocasião: aniversário, batizado, casamento, chá de bebê. Inclui embalagem, tag, cartão e arte exclusiva.','🎁')">
+      <div class="product-img" style="background:linear-gradient(135deg,#D4A090,#A0504A)">
+        <div class="product-emoji">🎁</div>
+        <div class="product-overlay"><span class="overlay-btn">Ver Detalhes</span></div>
+      </div>
+      <div class="product-body">
+        <p class="product-category">Kits</p>
+        <h3 class="product-name">Kit Lembrancinha</h3>
+        <p class="product-desc">Para qualquer ocasião especial com arte única e personalizada.</p>
+        <div class="product-footer">
+          <div class="product-price"><span class="price-from">valor</span>Sob consulta</div>
+          <a href="https://wa.me/5551999999999?text=Olá! Quero um orçamento de Kit Lembrancinha 🎁"
+             class="whatsapp-btn" target="_blank" onclick="event.stopPropagation()">💬 Orçar</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== PROCESSO ===================== -->
+<section id="processo">
+  <div class="processo-bg-text">ateliê</div>
+  <div class="processo-header reveal">
+    <p class="section-label" style="justify-content:center">Simples e especial</p>
+    <h2 class="processo-h2">Como funciona</h2>
+  </div>
+  <div class="processo-steps">
+    <div class="step reveal">
+      <div class="step-num"><span class="step-icon">💬</span></div>
+      <h3 class="step-title">1. Contato</h3>
+      <p class="step-text">Entre em contato pelo WhatsApp ou Instagram e me conte sobre o seu evento e o que você deseja.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-num"><span class="step-icon">🎨</span></div>
+      <h3 class="step-title">2. Criação</h3>
+      <p class="step-text">Desenvolvo a arte exclusiva para você com todas as personalizações combinadas.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-num"><span class="step-icon">✅</span></div>
+      <h3 class="step-title">3. Aprovação</h3>
+      <p class="step-text">Envio uma prévia para sua aprovação. Ajustes são feitos até você ficar 100% satisfeita.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-num"><span class="step-icon">📦</span></div>
+      <h3 class="step-title">4. Entrega</h3>
+      <p class="step-text">Após aprovação e pagamento, produzo e entrego com carinho no prazo combinado.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DEPOIMENTOS ===================== -->
+<section id="depoimentos">
+  <div class="dep-header reveal">
+    <p class="section-label dep-label" style="justify-content:center">O que dizem</p>
+    <h2 class="dep-h2">Clientes que amaram ✨</h2>
+  </div>
+  <div class="dep-grid">
+    <div class="dep-card reveal">
+      <div class="dep-stars">★★★★★</div>
+      <p class="dep-text">"Os convites do aniversário da minha filha ficaram perfeitos! A Lise teve muita paciência com minhas ideias e entregou antes do prazo. Recomendo muito!"</p>
+      <div class="dep-author">
+        <div class="dep-avatar">A</div>
+        <div>
+          <div class="dep-name">Ana Paula M.</div>
+          <div class="dep-date">Convites de Aniversário</div>
+        </div>
+      </div>
+    </div>
+    <div class="dep-card reveal">
+      <div class="dep-stars">★★★★★</div>
+      <p class="dep-text">"Pedi as lembranças de Natal para presentear minha equipe. Ficaram lindíssimas! Todos adoraram e pediram o contato. Super profissional e atenciosa!"</p>
+      <div class="dep-author">
+        <div class="dep-avatar">C</div>
+        <div>
+          <div class="dep-name">Carla Souza</div>
+          <div class="dep-date">Lembranças de Natal</div>
+        </div>
+      </div>
+    </div>
+    <div class="dep-card reveal">
+      <div class="dep-stars">★★★★★</div>
+      <p class="dep-text">"Amei demais o marcador de bíblia personalizado! Arte delicada, material de qualidade. A Lise capturou exatamente o que eu queria. Já indiquei para várias amigas!"</p>
+      <div class="dep-author">
+        <div class="dep-avatar">M</div>
+        <div>
+          <div class="dep-name">Maria Fernanda</div>
+          <div class="dep-date">Marcador de Bíblia</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INSTAGRAM ===================== -->
+<section id="instagram">
+  <p class="section-label" style="justify-content:center">Siga nas redes</p>
+  <h2 class="insta-h2">@liseoliveira.atelie</h2>
+  <p class="insta-sub">Acompanhe as criações e novidades do ateliê</p>
+  <div class="insta-grid reveal">
+    <div class="insta-item"><span class="insta-item-icon">📨</span><div class="insta-overlay">📸</div></div>
+    <div class="insta-item"><span class="insta-item-icon">✨</span><div class="insta-overlay">📸</div></div>
+    <div class="insta-item"><span class="insta-item-icon">🎄</span><div class="insta-overlay">📸</div></div>
+    <div class="insta-item"><span class="insta-item-icon">🎁</span><div class="insta-overlay">📸</div></div>
+  </div>
+  <a href="https://www.instagram.com/liseoliveira.atelie/" target="_blank" class="insta-follow-btn">
+    📸 Seguir no Instagram
+  </a>
+</section>
+
+<!-- ===================== CONTATO ===================== -->
+<section id="contato">
+  <div class="contato-left reveal">
+    <p class="section-label">Vamos criar juntas</p>
+    <h2 class="contato-h2">Peça seu<br><em>orçamento</em></h2>
+    <p class="contato-p">
+      Conta pra mim sobre o seu evento, a quantidade de peças e o que você está imaginando.
+      Vamos criar algo lindo juntas! 💕
+    </p>
+    <div class="contact-links">
+      <a href="https://wa.me/5551999999999" target="_blank" class="contact-link">
+        <span class="contact-link-icon">💬</span>
+        <div class="contact-link-text">
+          <strong>WhatsApp</strong>
+          <span>Resposta mais rápida</span>
+        </div>
+      </a>
+      <a href="https://www.instagram.com/liseoliveira.atelie/" target="_blank" class="contact-link">
+        <span class="contact-link-icon">📸</span>
+        <div class="contact-link-text">
+          <strong>Instagram</strong>
+          <span>@liseoliveira.atelie</span>
+        </div>
+      </a>
+      <a href="https://linktr.ee/liseoliveira.atelie" target="_blank" class="contact-link">
+        <span class="contact-link-icon">🔗</span>
+        <div class="contact-link-text">
+          <strong>Linktree</strong>
+          <span>Todos os links em um lugar</span>
+        </div>
+      </a>
+      <div class="contact-link" style="cursor:default">
+        <span class="contact-link-icon">📍</span>
+        <div class="contact-link-text">
+          <strong>Localização</strong>
+          <span>Viamão – RS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contato-right reveal">
+    <div class="form-card">
+      <h3 class="form-title">Solicitar Orçamento</h3>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Nome</label>
+          <input type="text" placeholder="Seu nome" id="f-nome">
+        </div>
+        <div class="form-group">
+          <label>WhatsApp</label>
+          <input type="text" placeholder="(51) 9 9999-9999" id="f-tel">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Tipo de Produto</label>
+        <select id="f-tipo">
+          <option value="">Selecione...</option>
+          <option>Convites</option>
+          <option>Lembranças de Natal</option>
+          <option>Célula de Ano Novo</option>
+          <option>Marcador de Bíblia</option>
+          <option>Kit Lembrancinha</option>
+          <option>Kit Páscoa</option>
+          <option>Outro</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Quantidade estimada</label>
+        <input type="text" placeholder="Ex: 100 unidades" id="f-qtd">
+      </div>
+      <div class="form-group">
+        <label>Conte mais sobre o seu pedido</label>
+        <textarea rows="4" placeholder="Tema, cores, data do evento, detalhes que quiser compartilhar..." id="f-msg"></textarea>
+      </div>
+      <button class="form-submit" onclick="submitForm()">Enviar pelo WhatsApp 💕</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name">Lise <span>Oliveira</span> · Ateliê</div>
+      <div class="footer-tagline">Papelaria Personalizada com Amor</div>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/liseoliveira.atelie/" target="_blank" title="Instagram">📸</a>
+        <a href="https://wa.me/5551999999999" target="_blank" title="WhatsApp">💬</a>
+        <a href="https://linktr.ee/liseoliveira.atelie" target="_blank" title="Linktree">🔗</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Navegação</div>
+      <ul class="footer-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#processo">Como Funciona</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#instagram">Instagram</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Produtos</div>
+      <ul class="footer-links">
+        <li><a href="#produtos">Convites</a></li>
+        <li><a href="#produtos">Lembranças</a></li>
+        <li><a href="#produtos">Marcadores</a></li>
+        <li><a href="#produtos">Kits</a></li>
+        <li><a href="#produtos">Datas Especiais</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 Lise Oliveira Ateliê · Viamão – RS</span>
+    <span>Feito com 💕 para você</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
